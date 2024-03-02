@@ -1,8 +1,9 @@
-import streamlit as st 
+import matplotlib.pyplot as plt
+import numpy as np
+import streamlit as st
  
-st.write(
-    """
-    # My first app
-    Hello, para calon praktisi data masa depan!
-    """
-)
+x = np.random.normal(15, 5, 250)
+ 
+fig, ax = plt.subplots()
+ax.hist(x=x, bins=15)
+st.pyplot(fig)
